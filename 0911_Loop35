@@ -1,0 +1,11 @@
+# ハンさんと
+for j in range(0, 10):
+    for i in range(0, 10):
+        if i == j:
+            if i == 9:
+                print(0)
+            else:
+              print(i+1, end="")
+        else:
+            print("0", end="")
+    print()

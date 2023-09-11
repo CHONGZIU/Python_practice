@@ -1,0 +1,22 @@
+#最大公約数と最小公倍数を求める
+A = input()
+B = input()
+A = int(A)
+B = int(B)
+L = A
+S = B
+
+
+while True:
+    N = L % S #　N = 残り
+    if N == 0:
+        GCM = S #　GCM　＝　最大公約数
+        LCM = int(A * B / GCM) #　LCM　＝　最小公倍数
+        print(GCM, LCM)
+        break
+    else:
+        L = S
+        S = N
+        
+        
+    

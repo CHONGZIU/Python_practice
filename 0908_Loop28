@@ -1,0 +1,20 @@
+# 約数求める
+N = input()
+N = int(N)
+
+for I in range(1,N+1):
+    if N % I == 0:
+        print(I)     
+
+''' 
+他の方法
+N = input()
+N = int(N)
+I = 1
+
+while True:
+    if N % I == 0:
+        print(I)
+    I += 1
+    if I > N:
+        break  '''

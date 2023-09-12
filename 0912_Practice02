@@ -1,0 +1,24 @@
+arr = []
+
+for i in range(5):
+    arr.append([])
+    a = 0
+    if i < 4:
+        for j in range(5):
+            if j < 4:
+                arr[i].append(i * 4 + j + 1)
+                a = a + i * 4 + j + 1
+            else:
+                arr[i].append(a)
+
+    else:
+        for k in range(5):
+            b = 0
+            for l in range(4):
+                b = b + arr[l][k]
+            arr[i].append(b)
+
+for i in range(5):
+    for j in range(5):
+        print(arr[i][j], end = " ")
+    print()

@@ -13,7 +13,7 @@ def month(M):
         m = 30
     else:
         m = 31
-    print(M, "월")
+    print(M, "月")
     return m
 
 def day(D):

@@ -1,0 +1,40 @@
+arr = [[" "]*7 for _ in range(5)]
+
+def check(C):
+    if C.isalpha() or int(C) <= 0 or int(C) >= 13:
+        return False
+    else:
+        return int(C)
+
+def month(M):
+    if int(M) == 2:
+        m = 28
+    elif int(M) == 4 or int(M) == 6 or int(M) == 9 or int(M) == 11:
+        m = 30
+    else:
+        m = 31
+    print(M, "월")
+    return m
+
+def day(D):
+    D = int(D)
+    d = 0
+    for i in range(5):
+        for j in range(7):
+            if d < D:
+                d = d + 1
+                arr[i][j] = d
+            elif d == D:
+                break
+    for i in range(5):
+        for j in range(7):
+            print(arr[i][j], end = " ")
+        print()
+    return arr
+
+def calander(num):
+    if check(num) == False:
+        return calander(input("月を入力してください"))
+    day(month(num))
+
+calander(input("月を入力してください"))

@@ -1,12 +1,12 @@
-arr = [[" "]*7 for _ in range(5)]
+arr = [[" "]*7 for _ in range(5)] # ２次元配列を作る
 
-def check(C):
+def check(C): # 変数が条件に当たるかを検討
     if C.isalpha() or int(C) <= 0 or int(C) >= 13:
         return False
     else:
         return int(C)
 
-def month(M):
+def month(M): # 変数で月の数が入ったら日数を変換
     if int(M) == 2:
         m = 28
     elif int(M) == 4 or int(M) == 6 or int(M) == 9 or int(M) == 11:
@@ -16,7 +16,7 @@ def month(M):
     print(M, "月")
     return m
 
-def day(D):
+def day(D): # 日数が入ったらカレンダーのように日数を変換
     D = int(D)
     d = 0
     for i in range(5):
@@ -26,13 +26,13 @@ def day(D):
                 arr[i][j] = d
             elif d == D:
                 break
-    for i in range(5):
-        for j in range(7):
-            print(arr[i][j], end = " ")
+            
+    for i in arr: # 拡張for門：for([配列の資料形][変数名]:[配列名]又は[コレクションのオブジェクト名])➞in　java
+        for j in i: # ㄴ> 配列内の全ての値を反復するfor門の向上された形体index値が必要ない時簡潔で有用
+            print(j, end = " ")
         print()
-    return arr
-
-def calander(num):
+        
+def calander(num): # 月の入力値を受けて、間違ったらまた質問をする
     if check(num) == False:
         return calander(input("月を入力してください"))
     day(month(num))

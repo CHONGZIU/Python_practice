@@ -4,26 +4,24 @@ class ListNode_2:
         self.val = val
         self.next = next
         
-
 def minus(a):
-    while True:
-        if a.next == None:
-            break
-        if a.val == a.next :
-            return a.val
-        else:
-            a.next
+    current = ListNode_2()  # val == 0
+    head = current  # head = 0
+    num = None
+    while a: 
+        if num != a.val:
+            current.next = a
+            current = current.next
+        num = a.val
         a = a.next
-        
-''' a.next 다음은 a.next.next랑 비교를 해야하는데 그러면 비교를 할 때마다 써줘야... '''
-''' 애초에 저 식이 맞기는 한가 '''
+    return head.next
 
 
 def print_linked_list(list):
     item = list
     while item:
         print(item.val, end=' ')
-        item = item.daum
+        item = item.next
 
 def main():
     a = ListNode_2(1)

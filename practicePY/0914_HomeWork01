@@ -1,0 +1,17 @@
+S = 0
+i = 0
+
+while True:
+    S = S + 3 * i 
+    if S >= 1000:
+        S = S - 3 * (i-1)
+        print (S)
+        break
+    
+    S = S + 5 * i
+    if S >= 1000:
+        S = S - 5 * (i-1)
+        print (S)
+        break
+    
+    i = i + 1

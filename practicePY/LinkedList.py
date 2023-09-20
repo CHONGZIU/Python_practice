@@ -9,7 +9,7 @@ def solution(a, b): # a, b solution이라는 함수에 들어갈 변수
     head = current
     while a and b:  # a와 b가 True인 동안 = a와 b가 모두 값이 있는 동안
         if a.val < b.val : # a라는 인스턴스 안에 val라는 속성
-            current.next = a #  
+            current.next = a 
             a = a.next # 이게 있기때문에 a자체가 a의 다음 값을 지칭
         else:
             current.next = b 

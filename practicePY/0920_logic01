@@ -1,10 +1,10 @@
 arr = [30, 355, 24, 12, 98, 72, 5, 76, 60, 35, 54, 62, 2, 12, 35]
-num = 0
+num = 0 # 値を込むための新しい変数を宣言
 
-for j in range(0, len(arr)):
-    for i in range(1, len(arr)):
-        if arr[i-1] > arr[i]:
-            num = arr[i]
+for j in range(0, len(arr)): # 配列の中にある全ての数字を上順に整理するための反復門
+    for i in range(1, len(arr)): # 配列の中に一番大きい数字を最後に送るための反復門
+        if arr[i-1] > arr[i]: # 配列のi番目の値が、配列のi-1番目の値のより大きい場合の条件
+            num = arr[i] # i番目とi-1番目を変わる実行門
             arr[i] = arr[i-1]
             arr[i-1] = num
 

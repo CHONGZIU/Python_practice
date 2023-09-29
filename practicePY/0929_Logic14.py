@@ -4,7 +4,7 @@ while True: # 入力された数字が正しい数字なのかを検討
     if num[0].isalpha() or int(num[0]) < 0:
         num = input("数字を直してください。 ").split()
     elif num[1].isalpha() or int(num[1]) < 0:
-        num = input("数字を直してください。  ").split()
+        num = input("数字を直してください。 ").split()
     else:
         break
 
